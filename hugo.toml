@@ -15,12 +15,12 @@ canonifyURLs = true
 
 # Site description
 [params]
-  description = "A forward-thinking tech company specializing in Web Development, System Design, Software Architecture, Cloud Solutions, AI, and Blockchain technology. We build the future of tech."
+  description = "A forward-thinking tech company specializing in System Design, Software Architecture, Cloud Solutions, AI, Blockchain, and Web Development. We build the future of tech."
   tagline = "Engineering Tomorrow's Solutions"
   author = "Next Orbital Code"
   
   # SEO
-  keywords = "web development, system design, software architecture, cloud solutions, AI, blockchain, tech company, software development, React, Next.js, Node.js, Kubernetes"
+  keywords = "system design, software architecture, cloud solutions, AI, blockchain, web development, tech company, software development, React, Next.js, Node.js, Kubernetes"
   
   # Open Graph / Social
   ogImage = "/images/og-image.svg"

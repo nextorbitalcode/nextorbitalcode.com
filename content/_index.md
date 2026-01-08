@@ -1,13 +1,13 @@
 ---
 title: "Next Orbital Code"
-description: "Next Orbital Code is a forward-thinking tech company specializing in Web Development, System Design, Software Architecture, Cloud Solutions, AI, and Blockchain technology. We build the future of tech."
+description: "Next Orbital Code is a forward-thinking tech company specializing in System Design, Software Architecture, Cloud Solutions, AI, Blockchain, and Web Development. We build the future of tech."
 keywords:
-  - web development company
-  - software architecture
   - system design
+  - software architecture
   - cloud solutions
   - AI development
   - blockchain development
+  - web development company
   - tech consulting
   - React development
   - Next.js agency

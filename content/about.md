@@ -48,12 +48,12 @@ To empower organizations with cutting-edge technology solutions that are not jus
 
 With deep expertise across the technology spectrum, we specialize in:
 
-- **Web Development** — From responsive frontends to scalable backends, we build web applications that perform beautifully
 - **System Design** — Scalable, distributed systems architecture with high availability, fault tolerance, and performance optimization
 - **Software Architecture** — Robust, maintainable systems designed for growth using microservices, DDD, and event-driven patterns
 - **Cloud Solutions** — Cloud-native infrastructure, Kubernetes, serverless, and DevOps excellence
 - **Artificial Intelligence** — Machine learning solutions from NLP to computer vision and predictive analytics
 - **Blockchain** — Decentralized applications and smart contracts built for security and transparency
+- **Web Development** — From responsive frontends to scalable backends, we build web applications that perform beautifully
 
 ## Let's Build Together
 

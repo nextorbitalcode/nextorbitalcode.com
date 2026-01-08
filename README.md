@@ -1,6 +1,6 @@
 # Next Orbital Code
 
-A modern, dark-themed website for Next Orbital Code — a tech company specializing in Web Development, System Design, Software Architecture, Cloud Solutions, AI, and Blockchain.
+A modern, dark-themed website for Next Orbital Code — a tech company specializing in System Design, Software Architecture, Cloud Solutions, AI, Blockchain, and Web Development.
 
 Built with [Hugo](https://gohugo.io/) and a custom theme.
 
