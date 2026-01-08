@@ -1,0 +1,83 @@
+baseURL = 'https://nextorbitalcode.com/'
+languageCode = 'en-us'
+title = 'Next Orbital Code'
+theme = 'nextorbital'
+
+# SEO & Site Settings
+enableRobotsTXT = true
+canonifyURLs = true
+
+# Sitemap settings
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+# Site description
+[params]
+  description = "A forward-thinking tech company specializing in Web Development, System Design, Software Architecture, Cloud Solutions, AI, and Blockchain technology. We build the future of tech."
+  tagline = "Engineering Tomorrow's Solutions"
+  author = "Next Orbital Code"
+  
+  # SEO
+  keywords = "web development, system design, software architecture, cloud solutions, AI, blockchain, tech company, software development, React, Next.js, Node.js, Kubernetes"
+  
+  # Open Graph / Social
+  ogImage = "/images/og-image.svg"
+  twitterHandle = "@nextorbitalcode"
+  
+  # Organization info for structured data
+  [params.organization]
+    name = "Next Orbital Code"
+    logo = "/images/logo.png"
+    email = "hello@nextorbitalcode.com"
+    foundingDate = "2024"
+    
+  [params.social]
+    github = "https://github.com/nextorbitalcode"
+    linkedin = "https://linkedin.com/company/nextorbitalcode"
+    twitter = "https://twitter.com/nextorbitalcode"
+
+# Main navigation menu
+[[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 20
+
+[[menus.main]]
+  name = 'Services'
+  url = '/#services'
+  weight = 30
+
+# Markup settings
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# Build settings
+[build]
+  writeStats = true
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+# Media types for JSON
+[mediaTypes]
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
+
+# Custom output format for search index
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true

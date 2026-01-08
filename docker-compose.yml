@@ -1,0 +1,12 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    # Optional: Add labels for reverse proxy (Traefik example)
+    # labels:
+    #   - "traefik.enable=true"
+    #   - "traefik.http.routers.nextorbital.rule=Host(`nextorbitalcode.com`)"
+    #   - "traefik.http.routers.nextorbital.tls.certresolver=letsencrypt"
+

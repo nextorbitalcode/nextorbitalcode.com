@@ -1,0 +1,32 @@
+{{ define "main" }}
+<section class="page-content">
+  <header class="page-header">
+    <div class="page-header-bg">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="section-container">
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}
+      <p class="page-subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+  
+  <div class="page-body">
+    <div class="section-container">
+      {{ .Content }}
+      
+      {{ if .Pages }}
+      <ul class="page-list">
+        {{ range .Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+

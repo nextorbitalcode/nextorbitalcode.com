@@ -1,0 +1,16 @@
+# robots.txt for {{ .Site.Title }}
+# {{ .Site.BaseURL }}
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+
+# Crawl-delay (optional, be polite to crawlers)
+Crawl-delay: 1
+
+# Disallow admin or private paths (if any)
+Disallow: /admin/
+Disallow: /private/
+

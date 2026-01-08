@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <span class="logo-icon">◈</span>
+        <span class="logo-text">{{ .Site.Title }}</span>
+      </a>
+      <p class="footer-tagline">{{ .Site.Params.tagline }}</p>
+    </div>
+    
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <ul>
+          {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/#services">Web Development</a></li>
+          <li><a href="/#services">System Design</a></li>
+          <li><a href="/#services">Cloud Solutions</a></li>
+          <li><a href="/#services">AI & Blockchain</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Connect</h4>
+        <ul>
+          {{ with .Site.Params.social }}
+          {{ with .github }}<li><a href="{{ . }}" target="_blank" rel="noopener">GitHub</a></li>{{ end }}
+          {{ with .linkedin }}<li><a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a></li>{{ end }}
+          {{ with .twitter }}<li><a href="{{ . }}" target="_blank" rel="noopener">Twitter</a></li>{{ end }}
+          {{ end }}
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+    <p class="footer-code">Built with precision <span class="accent">&</span> passion</p>
+  </div>
+</footer>
+

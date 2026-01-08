@@ -1,0 +1,22 @@
+{
+  "name": "Next Orbital Code",
+  "short_name": "NextOrbital",
+  "description": "A forward-thinking tech company specializing in Web Development, System Design, Software Architecture, Cloud Solutions, AI, and Blockchain.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/images/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

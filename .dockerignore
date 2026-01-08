@@ -1,0 +1,26 @@
+# Git
+.git
+.gitignore
+
+# Hugo output (we build fresh in container)
+public/
+resources/_gen/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+*.md
+!content/**/*.md
+

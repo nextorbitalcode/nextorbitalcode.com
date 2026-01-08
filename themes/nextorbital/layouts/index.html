@@ -1,0 +1,90 @@
+{{ define "main" }}
+<!-- Services Structured Data for SEO -->
+{{ partial "seo-services.html" . }}
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+  </div>
+  
+  <div class="hero-content">
+    <span class="hero-tag">{{ .Site.Params.tagline }}</span>
+    <h1>
+      <span class="hero-line">We Build the</span>
+      <span class="hero-line accent">Future of Tech</span>
+    </h1>
+    <p class="hero-description">
+      {{ .Site.Params.description }}
+    </p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Start Your Project</a>
+      <a href="#services" class="btn btn-secondary">Explore Services</a>
+    </div>
+  </div>
+  
+  <div class="hero-scroll">
+    <span>Scroll to explore</span>
+    <div class="scroll-indicator"></div>
+  </div>
+</section>
+
+<!-- Services Section -->
+{{ partial "services.html" . }}
+
+<!-- Why Choose Us Section -->
+<section class="why-section">
+  <div class="section-container">
+    <div class="section-header">
+      <span class="section-tag">Why Us</span>
+      <h2>Built Different</h2>
+      <p>What sets Next Orbital Code apart from the rest</p>
+    </div>
+    
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-number">01</span>
+        <h3>Technical Excellence</h3>
+        <p>Our engineers don't just code—they architect solutions. We bring deep expertise across the full stack.</p>
+      </div>
+      
+      <div class="why-card">
+        <span class="why-number">02</span>
+        <h3>Future-Proof Solutions</h3>
+        <p>We build with tomorrow in mind. Scalable, maintainable, and ready for what's next.</p>
+      </div>
+      
+      <div class="why-card">
+        <span class="why-number">03</span>
+        <h3>Partnership Approach</h3>
+        <p>We're not just vendors—we're partners. Your success is our success, from day one.</p>
+      </div>
+      
+      <div class="why-card">
+        <span class="why-number">04</span>
+        <h3>Transparent Process</h3>
+        <p>Clear communication, honest timelines, and no surprises. You'll always know where things stand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="section-container">
+    <div class="cta-content">
+      <h2>Ready to Launch Your Next Project?</h2>
+      <p>Let's discuss how we can help bring your vision to life with cutting-edge technology.</p>
+      <a href="/contact" class="btn btn-primary btn-large">Get in Touch</a>
+    </div>
+    <div class="cta-decoration">
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="orbit orbit-3"></div>
+      <div class="planet"></div>
+    </div>
+  </div>
+</section>
+{{ end }}
+

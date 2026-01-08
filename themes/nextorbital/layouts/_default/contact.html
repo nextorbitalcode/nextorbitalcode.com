@@ -1,0 +1,191 @@
+{{ define "main" }}
+<article class="page-content">
+  <header class="page-header">
+    <div class="page-header-bg">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="section-container">
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <p class="page-subtitle">{{ . }}</p>
+      {{ end }}
+    </div>
+  </header>
+
+  <div class="page-body">
+    <div class="section-container">
+      <p class="contact-intro">
+        We're excited to hear from you. Whether you have a project in mind, a
+        question about our services, or just want to say hello, we'd love to
+        connect.
+      </p>
+
+      <div class="contact-grid">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="john@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company (Optional)</label>
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Your Company"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Project Inquiry"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Tell us about your project or ask us anything..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@nextorbitalcode.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="20"
+                height="20"
+              >
+                <path
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Remote-first, Global Team</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                width="20"
+                height="20"
+              >
+                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h4>Response Time</h4>
+              <p>Within 24 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <h4>What types of projects do you work on?</h4>
+          <p>
+            We work on projects of all sizes—from MVPs and prototypes to
+            large-scale enterprise systems. Our sweet spot is complex technical
+            challenges that require deep expertise across multiple domains.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>How do you typically engage with clients?</h4>
+          <p>
+            We offer flexible engagement models including project-based work,
+            ongoing retainers, and team augmentation. We'll work with you to
+            find the arrangement that best fits your needs.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>What's your technology stack?</h4>
+          <p>
+            We're technology-agnostic and choose the best tools for each
+            project. That said, we have deep expertise in React, Next.js,
+            Node.js, Go, Python, AWS, GCP, Kubernetes, and various blockchain
+            platforms.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Do you work with international clients?</h4>
+          <p>
+            Absolutely! As a remote-first company, we work with clients across
+            time zones. We've developed effective collaboration practices that
+            make geographical boundaries irrelevant.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{{ end }}
