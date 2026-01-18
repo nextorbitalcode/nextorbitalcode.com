@@ -70,23 +70,63 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(element);
   });
   
-  // Form handling (basic)
+  // Form handling with fetch (no redirect)
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
       e.preventDefault();
       
-      // Get form data
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn.textContent;
       
-      // Here you would typically send the data to a server
-      console.log('Form submitted:', data);
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
       
-      // Show success message (you can customize this)
-      alert('Thank you for your message! We will get back to you soon.');
-      contactForm.reset();
+      try {
+        const formData = new FormData(contactForm);
+        
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData
+        });
+        
+        if (response.ok) {
+          // Success - show message and reset form
+          contactForm.reset();
+          showFormMessage(contactForm, 'Thank you! Your message has been sent successfully.', 'success');
+        } else {
+          throw new Error('Server responded with an error');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        showFormMessage(contactForm, 'Something went wrong. Please try again or email us directly.', 'error');
+      } finally {
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      }
     });
+  }
+  
+  // Helper function to show form messages
+  function showFormMessage(form, message, type) {
+    // Remove any existing message
+    const existingMsg = form.querySelector('.form-message');
+    if (existingMsg) existingMsg.remove();
+    
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `form-message form-message-${type}`;
+    msgDiv.textContent = message;
+    
+    // Insert after the submit button
+    const submitBtn = form.querySelector('button[type="submit"]');
+    submitBtn.insertAdjacentElement('afterend', msgDiv);
+    
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+      setTimeout(() => msgDiv.remove(), 5000);
+    }
   }
 });
 
